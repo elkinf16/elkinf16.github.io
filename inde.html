@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computadoras HP</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #0072c6;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #0072c6;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        nav a#productos {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #0072c6;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        h2 {
+            color: #0072c6;
+        }
+    </style>
+    <script>
+        function loadSection(section) {
+            const content = {
+                'historia': `
+                    <h2>Historia de HP</h2>
+                    <p>Hewlett-Packard (HP) fue fundada en 1939 por Bill Hewlett y Dave Packard en un garage en Palo Alto, California. Desde sus inicios, HP ha sido pionera en la innovacion tecnologica, ofreciendo productos de alta calidad y soluciones en el ambito de la computacion.</p>
+                `,
+                'caracteristicas': `
+                    <h2>Caracteristicas de las Computadoras HP</h2>
+                    <p>Las computadoras HP son conocidas por sus caracteristicas destacadas, que incluyen:</p>
+                    <ul>
+                        <li>Diseno elegante y moderno</li>
+                        <li>Rendimiento potente con procesadores de ultima generacion</li>
+                        <li>Opciones de pantalla tactil en muchos modelos</li>
+                        <li>Duracion de bateria prolongada</li>
+                        <li>Soporte tecnico confiable y garantia</li>
+                    </ul>
+                `,
+                'contacto': `
+                    <h2>Contacto</h2>
+                    <p>Para mas informacion sobre las computadoras HP, contacta a nuestro servicio al cliente:</p>
+                    <ul>
+                        <li>Telefono: +1 800 123 4567</li>
+                        <li>Email: soporte@hp.com</li>
+                        <li>Sitio web: <a href="https://www.hp.com" target="_blank">www.hp.com</a></li>
+                    </ul>
+                `
+            };
+            document.getElementById('content').innerHTML = content[section];
+        }
+    </script>
+</head>
+<body onload="loadSection('historia')">
+
+<header>
+    <h1>Computadoras HP</h1>
+</header>
+
+<nav>
+    <a onclick="loadSection('historia')">Historia</a>
+    <a id="productos" href="https://www.hp.com" target="_blank">Productos</a>
+    <a onclick="loadSection('caracteristicas')">Caracteristicas</a>
+    <a onclick="loadSection('contacto')">Contacto</a>
+</nav>
+
+<main id="content">
+    <!-- El contenido se cargar  aqu  din micamente -->
+</main>
+
+<footer>
+    <p>&copy; 2024 Computadoras HP. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
+
